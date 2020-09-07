@@ -6,7 +6,6 @@
 
 body {
 	font-family: "Segoe UI", sans-serif;
-	height: 100%;
 }
 
 a {
@@ -216,6 +215,10 @@ footer span {
 
 @media (max-width: 800px) {
 
+	body {
+		width: 510px;
+	}
+
 	.navbar {
 		height: 150px;
 		margin-bottom: 0;
@@ -240,6 +243,15 @@ footer span {
 		margin: 0 auto;
 		width: 550px;
 		height: 400px;
+	}
+
+	.img-area {
+		width: 510px;
+	}
+
+	.img-area img {
+		padding: 0;
+		border-radius: 5px;
 	}
 
 	.text-area {
