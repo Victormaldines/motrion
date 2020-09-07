@@ -1,3 +1,4 @@
+/* DEFAULT SETTINGS */
 * {
 	margin: 0;
 	padding: 0;
@@ -13,6 +14,8 @@ a {
 	font-size: 1.5em;
 	color: #2d2d2d;
 }
+
+/* NAVBAR */
 
 .navbar {
 	width: 100%;
@@ -35,6 +38,10 @@ a {
 	width: 150px;
 }
 
+.navbar ul li + li {
+	margin-left: 5px;
+}
+
 .navbar ul {
 	list-style: none;
 	display: flex;
@@ -52,6 +59,8 @@ a {
 	background: #2d2d2d;
 	border-radius: 5px;
 }
+
+/* MAIN */
 
 .container {
 	width: 1024px;
@@ -121,13 +130,16 @@ a {
 	text-align: justify;
 }
 
+/* CONTACT */
+
 .bg-contact {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 680px;
 	border-radius: 5px;
-	background: url(../img/mountain_3.png);
+	background: url(../img/mountain_3.png) center	;
 	background-size: cover;
 	transition: all .25s ease;
 }
@@ -152,7 +164,25 @@ a {
 	transform: scale(1.01);
 }
 
-.section-contact {
+@keyframes arrow {
+	from {
+		bottom: 60px;
+	}
+
+	to {
+		bottom: 30px;
+	}
+}
+
+.arrow {
+	animation: arrow 1s infinite alternate ease-in;
+	z-index: 1;
+	position: absolute;
+	font-size: 2em;
+	color: white;
+}
+
+.contact-section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -162,11 +192,23 @@ a {
 	height: 400px;
 }
 
-.section-contact img {
+.contact-section img {
 	max-width: 200px;
 	max-height: 50px;
 	margin: 20px 0 10px 0;
 }
+
+.linkedin span, .github span{
+	padding-bottom: 5px;
+	transition: border-bottom .1s ease;
+}
+
+.linkedin:hover span,
+.github:hover span{
+	border-bottom: 2px solid #2d2d2d;
+}
+
+/* FOOTER */
 
 footer {
 	height: 100px;
@@ -179,6 +221,8 @@ footer span {
 	font-size: 0.9em;
 	cursor: default;
 }
+
+/* BREAKPOINT MEDIUM-LARGE DEVICES */
 
 @media (max-width: 1050px) {
 
@@ -208,16 +252,9 @@ footer span {
 
 }
 
-@media (max-width: 800px) {
+/* BREAKPOINT MEDIUM DEVICES */
 
-	body {
-		width: 100%;
-	}
-
-	.navbar {
-		height: 150px;
-		margin-bottom: 0;
-	}
+@media (max-width: 785px) {
 
 	.sub-container {
 		justify-content: center;
@@ -235,17 +272,31 @@ footer span {
 	}
 
 	.img-area , .text-area {
-		width: 360px;
+		width: 70%;
 	}
 
 	.img-area img {
 		padding: 0;
-		width: 360px;
+		width: 95%;
 		border-radius: 5px;
 		margin-top: 10px;
 	}
 
-	.section-contact {
+	.contact-section {
 		font-size: 0.7em;
+	}
+}
+
+/* BREAKPOINT SMALL DEVICES */
+
+@media (max-width: 548px) {
+	.navbar {
+		height: 150px;
+		margin-bottom: 0;
+	}
+
+	.img-area, .img-area img,
+	.text-area {
+		width: 360px;
 	}
 }
