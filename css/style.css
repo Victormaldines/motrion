@@ -1,0 +1,254 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Segoe UI", sans-serif;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	font-size: 1.5em;
+	color: #2d2d2d;
+}
+
+.navbar {
+	width: 100%;
+	height: 100px;
+	background: #ebedef;
+}
+
+.sub-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 1024px;
+	height: 100px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.navbar img {
+	width: 150px;
+}
+
+.navbar ul {
+	list-style: none;
+	display: flex;
+}
+
+.navbar li a {
+	list-style: none;
+	display: block;
+	padding: 10px 20px;
+	transition: all .1s ease-in;
+}
+
+.navbar li a:hover {
+	color: #ebedef;
+	background: #2d2d2d;
+	border-radius: 5px;
+}
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+/* SECTION */
+
+.section {
+	display: grid;
+	grid-template-columns: 512px 512px;
+}
+
+.img-area, .text-area {
+	display: grid;
+	align-items: center;
+	width: 512px;
+	height: 400px;
+	transition: all .25s ease;
+}
+
+.img-area {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-area span {
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	transition: all .25s ease;
+}
+
+.img-area span:hover {
+	transform: scale(1.01);
+}
+
+.img-area img{
+	padding: 20px;
+	border-radius: 25px;
+	max-width: 100%;
+	transition: all .25s ease;
+}
+
+.img-area img:hover {
+	filter: blur(1px) grayscale(1);
+}
+
+.img-area:hover > span {
+	opacity: 1;
+}
+
+.text-area {
+	color: #2d2d2d;
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 20px;
+}
+
+.text-area h1 {
+	margin-bottom: 20px;
+	cursor: default;
+}
+
+.text-area p {
+	text-align: justify;
+}
+
+.bg-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 680px;
+	border-radius: 5px;
+	background: url(../img/mountain_3.png);
+	background-size: cover;
+	transition: all .25s ease;
+}
+
+.bg-contact:hover {
+	filter: grayscale(1);
+}
+
+.contact, .img-area span {
+	background: #ebedef;
+	padding: 15px 30px;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all .25s ease;
+}
+
+.contact:hover {
+	color: #ebedef;
+	background: none;
+	border: 1px solid #ebedef;
+	transform: scale(1.01);
+}
+
+.section-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	flex-wrap: wrap;
+	height: 400px;
+}
+
+.section-contact img {
+	max-width: 200px;
+	max-height: 50px;
+	margin: 20px 0 10px 0;
+}
+
+footer {
+	height: 100px;
+	background: #ebedef;
+}
+
+footer span {
+	margin: 0 auto;
+	font-style: italic;
+	font-size: 0.9em;
+	cursor: default;
+}
+
+@media (max-width: 1050px) {
+
+	.navbar {
+		margin-bottom: 50px;
+	}
+
+	.sub-container {
+		width: 760px;
+		padding: 0 40px;
+	}
+
+	.container {
+		width: 760px;
+	}
+
+	.section {
+		grid-template-columns: 760px;
+		justify-content: center;
+	}
+
+	.img-area, .text-area {
+		margin: 0 auto;
+		width: 700px;
+		height: 400px;
+		margin-bottom: 100px;
+	}
+
+	.text-area {
+		height: 200px;
+	}
+}
+
+@media (max-width: 800px) {
+
+	.navbar {
+		height: 150px;
+		margin-bottom: 0;
+	}
+
+	.sub-container {
+		justify-content: center;
+		width: 500px;
+		padding: 10px;
+	}
+
+	.container {
+		width: 510px;
+	}
+
+	.section {
+		grid-template-columns: 550px;
+		justify-content: center;
+	}
+
+	.img-area , .text-area {
+		margin: 0 auto;
+		width: 550px;
+		height: 400px;
+	}
+
+	.text-area {
+		width: 450px;
+		height: 200px;
+		margin-bottom: 100px;
+	}
+
+	.section-contact {
+		font-size: 0.8em;
+	}
+}
