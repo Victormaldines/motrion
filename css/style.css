@@ -69,7 +69,6 @@ a {
 	display: grid;
 	align-items: center;
 	width: 512px;
-	height: 400px;
 	transition: all .25s ease;
 }
 
@@ -204,19 +203,15 @@ footer span {
 	.img-area, .text-area {
 		margin: 0 auto;
 		width: 700px;
-		height: 400px;
-		margin-bottom: 100px;
+		margin-bottom: 20px;
 	}
 
-	.text-area {
-		height: 200px;
-	}
 }
 
 @media (max-width: 800px) {
 
 	body {
-		width: 510px;
+		width: 100%;
 	}
 
 	.navbar {
@@ -226,41 +221,31 @@ footer span {
 
 	.sub-container {
 		justify-content: center;
-		width: 500px;
+		width: 100%;
 		padding: 10px;
 	}
 
 	.container {
-		width: 510px;
+		width: 100%;
 	}
 
 	.section {
-		grid-template-columns: 550px;
+		grid-template-columns: 1;
 		justify-content: center;
 	}
 
 	.img-area , .text-area {
-		margin: 0 auto;
-		width: 550px;
-		height: 400px;
-	}
-
-	.img-area {
-		width: 510px;
+		width: 360px;
 	}
 
 	.img-area img {
 		padding: 0;
+		width: 360px;
 		border-radius: 5px;
-	}
-
-	.text-area {
-		width: 450px;
-		height: 200px;
-		margin-bottom: 100px;
+		margin-top: 10px;
 	}
 
 	.section-contact {
-		font-size: 0.8em;
+		font-size: 0.7em;
 	}
 }
